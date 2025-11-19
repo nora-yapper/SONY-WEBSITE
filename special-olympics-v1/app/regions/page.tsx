@@ -54,10 +54,10 @@ export default function RegionsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/20 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black z-10" />
         <Image
           src="/placeholder.svg?height=800&width=1600"
           alt="Find Your Region"
@@ -66,19 +66,19 @@ export default function RegionsPage() {
           priority
         />
         <div className="relative z-20 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 text-balance">Find Your Region</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">Find Your Region</h1>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="py-20 container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-8 text-center">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-700 leading-relaxed">
+          <div className="prose prose-invert prose-lg max-w-none">
+            <p className="text-xl text-gray-300 leading-relaxed">
               From our headquarters in Albany, Special Olympics New York coordinates events throughout nine regions of
               the state.
             </p>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-xl text-gray-300 leading-relaxed">
               Find your region below for contact information to become an athlete, coach, volunteer or become a sponsor.
             </p>
           </div>
@@ -86,13 +86,13 @@ export default function RegionsPage() {
       </section>
 
       {/* Regions Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Regions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Regions</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {regions.map((region) => (
-              <Card key={region.slug} className="bg-white border border-gray-200">
+              <Card key={region.slug} className="bg-white/5 backdrop-blur-sm border-white/10 h-full">
                 <CardContent className="p-8">
                   <div className="aspect-video relative mb-6 rounded-lg overflow-hidden">
                     <Image
@@ -102,8 +102,8 @@ export default function RegionsPage() {
                       className="object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{region.name}</h3>
-                  <p className="text-sm text-gray-600">{region.counties}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">{region.name}</h3>
+                  <p className="text-sm text-gray-400">{region.counties}</p>
                 </CardContent>
               </Card>
             ))}
@@ -114,10 +114,10 @@ export default function RegionsPage() {
       {/* Map Section */}
       <section className="py-20 container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <Card className="bg-white border border-gray-200">
+          <Card className="bg-white/5 backdrop-blur-sm border-white/10">
             <CardContent className="p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">New York State Regions Map</h2>
-              <div className="aspect-video relative rounded-lg overflow-hidden bg-gray-100">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">New York State Regions Map</h2>
+              <div className="aspect-video relative rounded-lg overflow-hidden bg-gray-800">
                 <Image
                   src="/placeholder.svg?height=600&width=1000"
                   alt="New York State Regions Map"

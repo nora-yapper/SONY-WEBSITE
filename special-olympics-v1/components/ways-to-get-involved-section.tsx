@@ -1,6 +1,6 @@
-import { Card } from "@/components/ui/card"
-import Link from "next/link"
-import { Users, Castle as Whistle, Trophy, Heart } from "lucide-react"
+import { Card } from "@/components/ui/card";
+import Link from "next/link";
+import { Users, Castle as Whistle, Trophy, Heart } from "lucide-react";
 
 export function WaysToGetInvolvedSection() {
   const ways = [
@@ -12,13 +12,15 @@ export function WaysToGetInvolvedSection() {
     },
     {
       title: "Become a Coach",
-      description: "Guide and mentor our athletes to reach their full potential",
+      description:
+        "Guide and mentor our athletes to reach their full potential",
       icon: Whistle,
       href: "/get-involved/become-a-coach",
     },
     {
       title: "Join as a Volunteer",
-      description: "Support our events, programs, and athletes in countless ways",
+      description:
+        "Support our events, programs, and athletes in countless ways",
       icon: Users,
       href: "/get-involved/volunteer",
     },
@@ -29,7 +31,7 @@ export function WaysToGetInvolvedSection() {
       icon: Heart,
       href: "/get-involved",
     },
-  ]
+  ];
 
   return (
     <section className="relative py-24 bg-gray-50">
@@ -39,26 +41,27 @@ export function WaysToGetInvolvedSection() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {ways.map((way) => {
-            const Icon = way.icon
+            const Icon = way.icon;
             return (
               <Link key={way.title} href={way.href}>
-                <Card className="p-8 bg-gray-200 hover:bg-gray-300 transition-all cursor-pointer h-full border-none">
+                <Card className="p-8 !bg-gray-100 hover:!bg-gray-200 transition-all cursor-pointer h-full border-none">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-full bg-primary/10">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-black mb-2">{way.title}</h3>
+                      <h3 className="text-xl font-bold text-black mb-2">
+                        {way.title}
+                      </h3>
                       <p className="text-gray-700 text-sm">{way.description}</p>
-                      <p className="text-primary text-sm mt-2 font-semibold">(Click to go to their respective page)</p>
                     </div>
                   </div>
                 </Card>
               </Link>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

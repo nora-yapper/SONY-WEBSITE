@@ -1,22 +1,33 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Home, Users, Heart, Trophy, Menu, X, Calendar, DollarSign, ChevronDown, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import {
+  Home,
+  Users,
+  Heart,
+  Trophy,
+  Menu,
+  X,
+  Calendar,
+  ChevronDown,
+  ChevronRight,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface SubItem {
-  label: string
-  href: string
+  label: string;
+  href: string;
 }
 
 interface NavItem {
-  id: string
-  label: string
-  href?: string
-  icon?: any
-  subitems?: SubItem[]
+  id: string;
+  label: string;
+  href?: string;
+  icon?: any;
+  subitems?: SubItem[];
 }
 
 const navItems: NavItem[] = [
@@ -60,7 +71,7 @@ const navItems: NavItem[] = [
       { label: "Law Enforcement Torch Run", href: "#" }, // Missing page
     ],
   },
-]
+];
 
 const bottomNavItems: NavItem[] = [
   {
@@ -73,85 +84,93 @@ const bottomNavItems: NavItem[] = [
     id: "donate",
     label: "Donate",
     href: "/donate",
-    icon: DollarSign,
+    icon: null,
   },
-]
+];
 
 export function VerticalSidebarNav() {
-  const pathname = usePathname()
-  const [activeSection, setActiveSection] = useState<string>("home")
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState<string>("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState<Record<string, boolean>>({
     "who-we-are": false,
     "get-involved": false,
     programs: false,
-  })
+  });
 
   const toggleDropdown = (id: string) => {
     setOpenDropdowns((prev) => ({
       ...prev,
       [id]: !prev[id],
-    }))
-  }
+    }));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll("[data-section]")
-      let currentSection = "home"
+      const sections = document.querySelectorAll("[data-section]");
+      let currentSection = "home";
 
       sections.forEach((section) => {
-        const rect = section.getBoundingClientRect()
+        const rect = section.getBoundingClientRect();
         if (rect.top <= 150 && rect.bottom >= 150) {
-          currentSection = section.getAttribute("data-section") || "home"
+          currentSection = section.getAttribute("data-section") || "home";
         }
-      })
+      });
 
-      setActiveSection(currentSection)
-    }
+      setActiveSection(currentSection);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    handleScroll()
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const matchedItem = navItems.find((item) => {
-      if (pathname === item.href) return true
-      if (item.subitems?.some((sub) => pathname === sub.href)) return true
-      return false
-    })
+      if (pathname === item.href) return true;
+      if (item.subitems?.some((sub) => pathname === sub.href)) return true;
+      return false;
+    });
     if (matchedItem) {
-      setActiveSection(matchedItem.id)
+      setActiveSection(matchedItem.id);
     }
-  }, [pathname])
+  }, [pathname]);
 
   const scrollToSection = (sectionId: string, href?: string) => {
-    setMobileMenuOpen(false)
-  }
+    setMobileMenuOpen(false);
+  };
 
   return (
     <>
-  {/* Desktop Sidebar */}
-  <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-64 bg-white text-gray-900 flex-col z-50 border-r border-gray-200">
+      {/* Desktop Sidebar */}
+      <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-64 bg-white text-gray-900 flex-col z-50 border-r border-gray-200">
         {/* Brand */}
-  <div className="py-6 px-6 border-b border-gray-200">
+        <div className="py-6 px-6 border-b border-gray-200">
           <Link href="/" className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center shrink-0">
-              <Trophy className="h-6 w-6 text-white" />
+            <div className="h-16 w-48 relative shrink-0">
+              <Image
+                src="/SONY_Logo.png"
+                alt="Special Olympics NY"
+                width={192}
+                height={64}
+                className="object-contain"
+              />
             </div>
-            <span className="font-bold text-lg tracking-tight uppercase leading-tight">Special Olympics NY</span>
           </Link>
         </div>
 
         {/* Navigation */}
         <nav className="flex-1 overflow-y-auto py-4 px-3">
           {navItems.map((item) => {
-            const isActive = activeSection === item.id || pathname === item.href
-            const hasActiveSubitem = item.subitems?.some((sub) => pathname === sub.href)
-            const itemIsActive = isActive || hasActiveSubitem
-            const Icon = item.icon
-            const isOpen = openDropdowns[item.id]
+            const isActive =
+              activeSection === item.id || pathname === item.href;
+            const hasActiveSubitem = item.subitems?.some(
+              (sub) => pathname === sub.href
+            );
+            const itemIsActive = isActive || hasActiveSubitem;
+            const Icon = item.icon;
+            const isOpen = openDropdowns[item.id];
 
             return (
               <div key={item.id} className="mb-2">
@@ -162,11 +181,17 @@ export function VerticalSidebarNav() {
                       aria-expanded={isOpen}
                       aria-current={itemIsActive ? "page" : undefined}
                       className={`flex items-center justify-between gap-3 w-full px-4 py-3 rounded-lg transition-all duration-300
-                        ${itemIsActive ? "bg-red-500 text-white border-l-4 border-red-500" : "hover:bg-gray-100 text-gray-700 border-l-4 border-transparent"}`}
+                        ${
+                          itemIsActive
+                            ? "bg-red-500 text-white border-l-4 border-red-500"
+                            : "hover:bg-gray-100 text-gray-700 border-l-4 border-transparent"
+                        }`}
                     >
                       <div className="flex items-center gap-3">
                         {Icon && <Icon className="h-5 w-5 shrink-0" />}
-                        <span className="font-semibold text-sm uppercase tracking-wide">{item.label}</span>
+                        <span className="font-semibold text-sm uppercase tracking-wide">
+                          {item.label}
+                        </span>
                       </div>
                       {isOpen ? (
                         <ChevronDown className="h-4 w-4 shrink-0" />
@@ -182,7 +207,11 @@ export function VerticalSidebarNav() {
                             key={subitem.label}
                             href={subitem.href}
                             className={`text-sm py-2 px-3 rounded transition-all duration-300 text-gray-700 hover:text-gray-900 hover:bg-gray-100 hover:pl-4 text-left
-                              ${pathname === subitem.href ? "bg-red-50 text-gray-900 font-semibold" : ""}`}
+                              ${
+                                pathname === subitem.href
+                                  ? "bg-red-50 text-gray-900 font-semibold"
+                                  : ""
+                              }`}
                           >
                             {subitem.label}
                           </Link>
@@ -195,34 +224,60 @@ export function VerticalSidebarNav() {
                     href={item.href || "#"}
                     className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg transition-all duration-300 group
                       ${
-                        isActive ? "bg-red-500 text-white border-l-4 border-red-500" : "hover:bg-gray-100 text-gray-700 border-l-4 border-transparent"
+                        isActive
+                          ? "bg-red-500 text-white border-l-4 border-red-500"
+                          : "hover:bg-gray-100 text-gray-700 border-l-4 border-transparent"
                       }`}
                     aria-current={isActive ? "page" : undefined}
                   >
                     {Icon && <Icon className="h-5 w-5 shrink-0" />}
-                    <span className="font-semibold text-sm uppercase tracking-wide">{item.label}</span>
+                    <span className="font-semibold text-sm uppercase tracking-wide">
+                      {item.label}
+                    </span>
                   </Link>
                 )}
               </div>
-            )
+            );
           })}
         </nav>
 
         <div className="border-t border-gray-200 p-4 space-y-2">
           {bottomNavItems.map((item) => {
-            const Icon = item.icon
-            const isDonate = item.id === "donate"
+            const Icon = item.icon;
+            const isDonate = item.id === "donate";
             return (
               <Link
                 key={item.id}
                 href={item.href || "#"}
                 className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg transition-all duration-300
-                  ${isDonate ? "border border-red-500 text-red-600 hover:bg-red-50" : "hover:bg-gray-100 text-gray-700"}`}
+                  ${
+                    isDonate
+                      ? "border border-red-500 text-red-600 hover:bg-red-50"
+                      : "hover:bg-gray-100 text-gray-700"
+                  }`}
               >
-                {Icon && <Icon className="h-5 w-5 shrink-0" />}
-                <span className={`font-semibold text-sm uppercase tracking-wide ${isDonate ? "text-red-600" : ""}`}>{item.label}</span>
+                {isDonate ? (
+                  <div className="h-5 w-5 relative shrink-0">
+                    <Image
+                      src="/SONY_Icon.png"
+                      alt="Donate"
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
+                  </div>
+                ) : Icon ? (
+                  <Icon className="h-5 w-5 shrink-0" />
+                ) : null}
+                <span
+                  className={`font-semibold text-sm uppercase tracking-wide ${
+                    isDonate ? "text-red-600" : ""
+                  }`}
+                >
+                  {item.label}
+                </span>
               </Link>
-            )
+            );
           })}
         </div>
       </aside>
@@ -234,7 +289,11 @@ export function VerticalSidebarNav() {
           size="icon"
           className="bg-white/90 backdrop-blur-sm border border-gray-200 hover:bg-gray-100"
         >
-          {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {mobileMenuOpen ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <Menu className="h-5 w-5" />
+          )}
           <span className="sr-only">Toggle menu</span>
         </Button>
       </div>
@@ -252,22 +311,34 @@ export function VerticalSidebarNav() {
           <aside className="lg:hidden fixed left-0 top-0 h-screen w-64 bg-white text-gray-900 flex flex-col z-50 border-r border-gray-200 animate-in slide-in-from-left duration-300">
             {/* Brand */}
             <div className="py-6 px-6 border-b border-gray-200">
-              <Link href="/" className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
-                <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center shrink-0">
-                  <Trophy className="h-6 w-6 text-white" />
+              <Link
+                href="/"
+                className="flex items-center gap-3"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <div className="h-16 w-48 relative shrink-0">
+                  <Image
+                    src="/SONY_Logo.png"
+                    alt="Special Olympics NY"
+                    width={192}
+                    height={64}
+                    className="object-contain"
+                  />
                 </div>
-                <span className="font-bold text-lg tracking-tight uppercase leading-tight">Special Olympics NY</span>
               </Link>
             </div>
 
             {/* Navigation */}
             <nav className="flex-1 overflow-y-auto py-4 px-3">
               {navItems.map((item) => {
-                const isActive = activeSection === item.id || pathname === item.href
-                const hasActiveSubitem = item.subitems?.some((sub) => pathname === sub.href)
-                const itemIsActive = isActive || hasActiveSubitem
-                const Icon = item.icon
-                const isOpen = openDropdowns[item.id]
+                const isActive =
+                  activeSection === item.id || pathname === item.href;
+                const hasActiveSubitem = item.subitems?.some(
+                  (sub) => pathname === sub.href
+                );
+                const itemIsActive = isActive || hasActiveSubitem;
+                const Icon = item.icon;
+                const isOpen = openDropdowns[item.id];
 
                 return (
                   <div key={item.id} className="mb-2">
@@ -278,11 +349,17 @@ export function VerticalSidebarNav() {
                           aria-expanded={isOpen}
                           aria-current={itemIsActive ? "page" : undefined}
                           className={`flex items-center justify-between gap-3 w-full px-4 py-3 rounded-lg transition-all duration-300
-                            ${itemIsActive ? "bg-red-500 text-white border-l-4 border-red-500" : "hover:bg-gray-100 text-gray-700 border-l-4 border-transparent"}`}
+                            ${
+                              itemIsActive
+                                ? "bg-red-500 text-white border-l-4 border-red-500"
+                                : "hover:bg-gray-100 text-gray-700 border-l-4 border-transparent"
+                            }`}
                         >
                           <div className="flex items-center gap-3">
                             {Icon && <Icon className="h-5 w-5 shrink-0" />}
-                            <span className="font-semibold text-sm uppercase tracking-wide">{item.label}</span>
+                            <span className="font-semibold text-sm uppercase tracking-wide">
+                              {item.label}
+                            </span>
                           </div>
                           {isOpen ? (
                             <ChevronDown className="h-4 w-4 shrink-0" />
@@ -299,7 +376,11 @@ export function VerticalSidebarNav() {
                                 href={subitem.href}
                                 onClick={() => setMobileMenuOpen(false)}
                                 className={`text-sm py-2 px-3 rounded transition-all duration-300 text-gray-700 hover:text-gray-900 hover:bg-gray-100 hover:pl-4 text-left
-                                  ${pathname === subitem.href ? "bg-red-50 text-gray-900 font-semibold" : ""}`}
+                                  ${
+                                    pathname === subitem.href
+                                      ? "bg-red-50 text-gray-900 font-semibold"
+                                      : ""
+                                  }`}
                               >
                                 {subitem.label}
                               </Link>
@@ -319,36 +400,60 @@ export function VerticalSidebarNav() {
                           }`}
                       >
                         {Icon && <Icon className="h-5 w-5 shrink-0" />}
-                        <span className="font-semibold text-sm uppercase tracking-wide">{item.label}</span>
+                        <span className="font-semibold text-sm uppercase tracking-wide">
+                          {item.label}
+                        </span>
                       </Link>
                     )}
                   </div>
-                )
+                );
               })}
             </nav>
 
             {/* Bottom Navigation */}
             <div className="border-t border-gray-200 p-4 space-y-2">
               {bottomNavItems.map((item) => {
-                const Icon = item.icon
-                const isDonate = item.id === "donate"
+                const Icon = item.icon;
+                const isDonate = item.id === "donate";
                 return (
                   <Link
                     key={item.id}
                     href={item.href || "#"}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg transition-all duration-300
-                      ${isDonate ? "border border-red-500 text-red-600 hover:bg-red-50" : "hover:bg-gray-100 text-gray-700"}`}
+                      ${
+                        isDonate
+                          ? "border border-red-500 text-red-600 hover:bg-red-50"
+                          : "hover:bg-gray-100 text-gray-700"
+                      }`}
                   >
-                    {Icon && <Icon className="h-5 w-5 shrink-0" />}
-                    <span className={`font-semibold text-sm uppercase tracking-wide ${isDonate ? "text-red-600" : ""}`}>{item.label}</span>
+                    {isDonate ? (
+                      <div className="h-5 w-5 relative shrink-0">
+                        <Image
+                          src="/SONY_Icon.png"
+                          alt="Donate"
+                          width={20}
+                          height={20}
+                          className="object-contain"
+                        />
+                      </div>
+                    ) : Icon ? (
+                      <Icon className="h-5 w-5 shrink-0" />
+                    ) : null}
+                    <span
+                      className={`font-semibold text-sm uppercase tracking-wide ${
+                        isDonate ? "text-red-600" : ""
+                      }`}
+                    >
+                      {item.label}
+                    </span>
                   </Link>
-                )
+                );
               })}
             </div>
           </aside>
         </>
       )}
     </>
-  )
+  );
 }

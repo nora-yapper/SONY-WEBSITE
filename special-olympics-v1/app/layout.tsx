@@ -1,30 +1,34 @@
-import type React from "react"
-import "./globals.css"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import Script from "next/script"
-import { Suspense } from "react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
-import { VerticalSidebarNav } from "@/components/vertical-sidebar-nav"
-import { SectionAnnouncement } from "@/components/section-announcement"
+import type React from "react";
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import Script from "next/script";
+import { Suspense } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+import { VerticalSidebarNav } from "@/components/vertical-sidebar-nav";
+import { SectionAnnouncement } from "@/components/section-announcement";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" })
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Special Olympics New York | Authentic Champions",
   description:
     "Special Olympics New York provides year-round sports training and athletic competition for children and adults with intellectual disabilities across New York State.",
   generator: "v0.app",
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className} style={{ scrollBehavior: "smooth" }}>
+    <html
+      lang="en"
+      className={inter.className}
+      style={{ scrollBehavior: "smooth" }}
+    >
       <head>
         <meta
           name="viewport"
@@ -38,7 +42,6 @@ export default function RootLayout({
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
-          fetchPriority="high"
         />
 
         {/* Dynamic Favicon Script */}
@@ -71,7 +74,10 @@ export default function RootLayout({
         </Script>
 
         {/* Google Analytics (deferred) */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-W6LV22900R" strategy="lazyOnload" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-W6LV22900R"
+          strategy="lazyOnload"
+        />
         <Script id="gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -81,7 +87,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <VerticalSidebarNav />
 
         <SectionAnnouncement />
@@ -95,5 +101,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
