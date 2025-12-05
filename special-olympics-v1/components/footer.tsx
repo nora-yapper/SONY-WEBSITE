@@ -56,20 +56,24 @@ export function Footer() {
 
             <div className="flex items-center gap-3 mt-4">
               {[
-                "x",
-                "facebook",
-                "instagram",
-                "youtube",
-                "linkedin",
-                "tiktok",
-              ].map((id) => (
+                { id: "x", icon: "twitter" },
+                { id: "facebook", icon: "facebook" },
+                { id: "instagram", icon: "instagram" },
+                { id: "youtube", icon: "youtube" },
+                { id: "linkedin", icon: "linkedin" },
+                { id: "tiktok", icon: "tiktok" },
+              ].map(({ id, icon }) => (
                 <a
                   key={id}
                   href="#"
                   aria-label={id}
-                  className="h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-700 text-xs hover:bg-gray-100"
+                  className="h-8 w-8 flex items-center justify-center hover:opacity-80 transition-opacity"
                 >
-                  {id === "x" ? "X" : id[0].toUpperCase()}
+                  <img
+                    src={`/icons/${icon}.png`}
+                    alt={id}
+                    className="h-8 w-8"
+                  />
                 </a>
               ))}
             </div>
@@ -154,20 +158,54 @@ export function Footer() {
             </ul>
 
             <div className="flex items-center gap-3 mt-4">
-              <div
-                role="img"
-                aria-label="Platinum Transparency 2025"
-                className="w-24 h-12 rounded border border-gray-300 flex items-center justify-center bg-white text-xs text-gray-700"
+              <a
+                href="https://www.guidestar.org/profile/23-7061382"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Candid Transparency"
               >
-                Platinum Transparency 2025
-              </div>
-              <div
-                role="img"
+                <img
+                  src="/images/candid.svg"
+                  alt="Candid Transparency"
+                  className="h-15 object-contain"
+                />
+              </a>
+              <a
+                href="https://www.charitynavigator.org/ein/237061382"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Charity Navigator"
-                className="w-24 h-12 rounded border border-gray-300 flex items-center justify-center bg-white text-xs text-gray-700"
               >
-                Charity Navigator
-              </div>
+                <img
+                  src="/images/charity.png"
+                  alt="Charity Navigator"
+                  className="h-15 object-contain"
+                />
+              </a>
+              <a
+                href="https://www.specialolympics-ny.org/who-we-are/staff-board/career-opportunities/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Top Work Places"
+              >
+                <img
+                  src="/images/TopWorkPlaces.png"
+                  alt="Top Work Places"
+                  className="h-15 object-contain"
+                />
+              </a>
+              <a
+                href="https://www.specialolympics-ny.org/who-we-are/staff-board/career-opportunities/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="EmployAbility"
+              >
+                <img
+                  src="/images/EmployAbility.png"
+                  alt="EmployAbility"
+                  className="h-15 object-contain"
+                />
+              </a>
             </div>
 
             <p className="text-xs text-gray-600 mt-4">

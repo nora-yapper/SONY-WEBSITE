@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 
 export function FindYourRegionSection() {
@@ -11,6 +12,7 @@ export function FindYourRegionSection() {
       color: "bg-red-600",
       textColor: "text-white",
       href: "/regions",
+      image: "/images/CapitalDistrictNY.png",
     },
     {
       name: "Central New York",
@@ -19,6 +21,7 @@ export function FindYourRegionSection() {
       color: "bg-red-600",
       textColor: "text-white",
       href: "/regions",
+      image: "/images/CentralNY.png",
     },
     {
       name: "Genesee Region",
@@ -27,6 +30,7 @@ export function FindYourRegionSection() {
       color: "bg-red-600",
       textColor: "text-white",
       href: "/regions",
+      image: "/images/GeneseeNY.png",
     },
     {
       name: "Hudson Valley",
@@ -35,6 +39,7 @@ export function FindYourRegionSection() {
       color: "bg-blue-600",
       textColor: "text-white",
       href: "/regions",
+      image: "/images/HudsonValleyNY.png",
     },
     {
       name: "Long Island",
@@ -42,6 +47,7 @@ export function FindYourRegionSection() {
       color: "bg-blue-600",
       textColor: "text-white",
       href: "/regions",
+      image: "/images/LongIslandNY.png",
     },
     {
       name: "New York City",
@@ -49,6 +55,7 @@ export function FindYourRegionSection() {
       color: "bg-blue-600",
       textColor: "text-white",
       href: "/regions",
+      image: "/images/NewYorkCityNY.png",
     },
     {
       name: "North Country",
@@ -57,6 +64,7 @@ export function FindYourRegionSection() {
       color: "bg-black",
       textColor: "text-white",
       href: "/regions",
+      image: "/images/NorthContryNY.png",
     },
     {
       name: "Southern Tier",
@@ -64,6 +72,7 @@ export function FindYourRegionSection() {
       color: "bg-gray-600",
       textColor: "text-white",
       href: "/regions",
+      image: "/images/SouthernTierNY.png",
     },
     {
       name: "Western New York",
@@ -71,6 +80,7 @@ export function FindYourRegionSection() {
       color: "bg-gray-600",
       textColor: "text-white",
       href: "/regions",
+      image: "/images/WestNY.png",
     },
   ];
 
@@ -84,20 +94,33 @@ export function FindYourRegionSection() {
           {regions.map((region) => (
             <Link key={region.name} href={region.href}>
               <Card
-                className={`p-8 ${region.color} ${region.textColor} hover:opacity-90 transition-all cursor-pointer h-full border-none`}
+                className={`p-8 ${region.color} ${region.textColor} hover:opacity-90 transition-all cursor-pointer h-full border-none relative overflow-hidden`}
               >
-                <h3 className="text-2xl font-bold mb-4">{region.name}</h3>
-                <p className="text-sm mb-6 opacity-90">{region.counties}</p>
-                <Button
-                  variant="outline"
-                  className={`rounded-full ${
-                    region.textColor === "text-black"
-                      ? "border-white text-white hover:bg-white hover:text-black"
-                      : "border-black text-black hover:bg-black hover:text-white"
-                  }`}
-                >
-                  Learn More
-                </Button>
+                {region.image && (
+                  <div className="absolute right-2 top-2 bottom-2 w-auto flex items-center opacity-40 pointer-events-none">
+                    <Image
+                      src={region.image}
+                      alt={region.name}
+                      width={200}
+                      height={300}
+                      className="h-full w-auto object-contain"
+                    />
+                  </div>
+                )}
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold mb-4">{region.name}</h3>
+                  <p className="text-sm mb-6 opacity-90">{region.counties}</p>
+                  <Button
+                    variant="outline"
+                    className={`rounded-full ${
+                      region.textColor === "text-black"
+                        ? "border-white text-white hover:bg-white hover:text-black"
+                        : "border-black text-black hover:bg-black hover:text-white"
+                    }`}
+                  >
+                    Learn More
+                  </Button>
+                </div>
               </Card>
             </Link>
           ))}
