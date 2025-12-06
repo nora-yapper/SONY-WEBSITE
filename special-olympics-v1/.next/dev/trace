@@ -1,0 +1,1918 @@
+[
+  [
+    {
+      "name": "hot-reloader",
+      "duration": 57,
+      "timestamp": 796106576892,
+      "id": 3,
+      "tags": {
+        "version": "16.0.1"
+      },
+      "startTime": 1764968421346,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "compile-path",
+      "duration": 221214,
+      "timestamp": 796106871931,
+      "id": 4,
+      "tags": {
+        "trigger": "proxy"
+      },
+      "startTime": 1764968421641,
+      "traceId": "ba0329ef93434812"
+    }
+  ],
+  [
+    {
+      "name": "setup-dev-bundler",
+      "duration": 958271,
+      "timestamp": 796106252521,
+      "id": 2,
+      "parentId": 1,
+      "tags": {},
+      "startTime": 1764968421022,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "start-dev-server",
+      "duration": 1810891,
+      "timestamp": 796105943790,
+      "id": 1,
+      "tags": {
+        "cpus": "24",
+        "platform": "win32",
+        "memory.freeMem": "2413600768",
+        "memory.totalMem": "16886128640",
+        "memory.heapSizeLimit": "8492417024",
+        "memory.rss": "290967552",
+        "memory.heapTotal": "73355264",
+        "memory.heapUsed": "41679784"
+      },
+      "startTime": 1764968420713,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "compile-path",
+      "duration": 3257430,
+      "timestamp": 796108381636,
+      "id": 7,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764968423151,
+      "traceId": "ba0329ef93434812"
+    }
+  ],
+  [
+    {
+      "name": "ensure-page",
+      "duration": 1215,
+      "timestamp": 796112887593,
+      "id": 8,
+      "parentId": 3,
+      "startTime": 1764968427657,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 592,
+      "timestamp": 796112888983,
+      "id": 9,
+      "parentId": 3,
+      "tags": {
+        "inputPage": ""
+      },
+      "startTime": 1764968427658,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 660,
+      "timestamp": 796112896049,
+      "id": 10,
+      "parentId": 3,
+      "tags": {
+        "inputPage": ""
+      },
+      "startTime": 1764968427665,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 521,
+      "timestamp": 796112896852,
+      "id": 11,
+      "parentId": 3,
+      "tags": {
+        "inputPage": ""
+      },
+      "startTime": 1764968427666,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 4681265,
+      "timestamp": 796108366178,
+      "id": 5,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764968423135,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 10,
+      "timestamp": 796113047590,
+      "id": 15,
+      "parentId": 5,
+      "tags": {
+        "url": "/",
+        "memory.rss": "695746560",
+        "memory.heapUsed": "99002056",
+        "memory.heapTotal": "132022272"
+      },
+      "startTime": 1764968427817,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "compile-path",
+      "duration": 554603,
+      "timestamp": 796112904268,
+      "id": 14,
+      "tags": {
+        "trigger": "/_not-found/page"
+      },
+      "startTime": 1764968427673,
+      "traceId": "ba0329ef93434812"
+    }
+  ],
+  [
+    {
+      "name": "ensure-page",
+      "duration": 5154,
+      "timestamp": 796113460223,
+      "id": 16,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/_not-found/page"
+      },
+      "startTime": 1764968428229,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 809698,
+      "timestamp": 796112898639,
+      "id": 12,
+      "tags": {
+        "url": ""
+      },
+      "startTime": 1764968427668,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 17,
+      "timestamp": 796113708474,
+      "id": 17,
+      "parentId": 12,
+      "tags": {
+        "memory.rss": "711749632",
+        "memory.heapUsed": "116872632",
+        "memory.heapTotal": "144654336"
+      },
+      "startTime": 1764968428478,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "compile-path",
+      "duration": 85821,
+      "timestamp": 797657803326,
+      "id": 20,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764969972572,
+      "traceId": "ba0329ef93434812"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 503000,
+      "timestamp": 797657304388,
+      "id": 21,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764969973003,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 468838,
+      "timestamp": 797657793758,
+      "id": 18,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764969972562,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 9,
+      "timestamp": 797658262704,
+      "id": 22,
+      "parentId": 18,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "232378368",
+        "memory.heapUsed": "121012216",
+        "memory.heapTotal": "132161536"
+      },
+      "startTime": 1764969973031,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "compile-path",
+      "duration": 17972,
+      "timestamp": 797667914904,
+      "id": 25,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764969982683,
+      "traceId": "ba0329ef93434812"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 79000,
+      "timestamp": 797667831248,
+      "id": 26,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764969982782,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 115316,
+      "timestamp": 797667914119,
+      "id": 23,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764969982683,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 5,
+      "timestamp": 797668029493,
+      "id": 27,
+      "parentId": 23,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "247472128",
+        "memory.heapUsed": "129514600",
+        "memory.heapTotal": "153280512"
+      },
+      "startTime": 1764969982798,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 2811,
+      "timestamp": 797669337953,
+      "id": 29,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764969984106,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 779,
+      "timestamp": 797669931918,
+      "id": 30,
+      "parentId": 3,
+      "tags": {
+        "inputPage": ""
+      },
+      "startTime": 1764969984700,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 370,
+      "timestamp": 797669932754,
+      "id": 31,
+      "parentId": 3,
+      "tags": {
+        "inputPage": ""
+      },
+      "startTime": 1764969984701,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 540,
+      "timestamp": 797669936383,
+      "id": 32,
+      "parentId": 3,
+      "tags": {
+        "inputPage": ""
+      },
+      "startTime": 1764969984705,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 367,
+      "timestamp": 797669936969,
+      "id": 33,
+      "parentId": 3,
+      "tags": {
+        "inputPage": ""
+      },
+      "startTime": 1764969984705,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 28161,
+      "timestamp": 797669938926,
+      "id": 35,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/_not-found/page"
+      },
+      "startTime": 1764969984707,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 4192,
+      "timestamp": 797669967297,
+      "id": 36,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/_not-found/page"
+      },
+      "startTime": 1764969984736,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 707765,
+      "timestamp": 797669337037,
+      "id": 28,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764969984106,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 9,
+      "timestamp": 797670044891,
+      "id": 37,
+      "parentId": 28,
+      "tags": {
+        "url": "/",
+        "memory.rss": "284024832",
+        "memory.heapUsed": "160018560",
+        "memory.heapTotal": "188669952"
+      },
+      "startTime": 1764969984813,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 121372,
+      "timestamp": 797669938316,
+      "id": 34,
+      "tags": {
+        "url": ""
+      },
+      "startTime": 1764969984707,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 8,
+      "timestamp": 797670059755,
+      "id": 38,
+      "parentId": 34,
+      "tags": {
+        "memory.rss": "285138944",
+        "memory.heapUsed": "160631696",
+        "memory.heapTotal": "188669952"
+      },
+      "startTime": 1764969984828,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "compile-path",
+      "duration": 44358,
+      "timestamp": 797871039098,
+      "id": 41,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764970185808,
+      "traceId": "ba0329ef93434812"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 380000,
+      "timestamp": 797870796385,
+      "id": 44,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764970185954,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 1583,
+      "timestamp": 797871184145,
+      "id": 43,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764970185953,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 291534,
+      "timestamp": 797871038439,
+      "id": 39,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764970185808,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 7,
+      "timestamp": 797871330051,
+      "id": 45,
+      "parentId": 39,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "392097792",
+        "memory.heapUsed": "177626872",
+        "memory.heapTotal": "204435456"
+      },
+      "startTime": 1764970186099,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 163516,
+      "timestamp": 797871183697,
+      "id": 42,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764970185953,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 8,
+      "timestamp": 797871347273,
+      "id": 46,
+      "parentId": 42,
+      "tags": {
+        "url": "/",
+        "memory.rss": "395210752",
+        "memory.heapUsed": "180602408",
+        "memory.heapTotal": "204959744"
+      },
+      "startTime": 1764970186116,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 592,
+      "timestamp": 797871378502,
+      "id": 47,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764970186148,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 454,
+      "timestamp": 797871379182,
+      "id": 48,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764970186148,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 610,
+      "timestamp": 797871381935,
+      "id": 49,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764970186151,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 334,
+      "timestamp": 797871382597,
+      "id": 50,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764970186152,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "compile-path",
+      "duration": 52349,
+      "timestamp": 797871386377,
+      "id": 53,
+      "tags": {
+        "trigger": "/_not-found/page"
+      },
+      "startTime": 1764970186156,
+      "traceId": "ba0329ef93434812"
+    }
+  ],
+  [
+    {
+      "name": "ensure-page",
+      "duration": 5729,
+      "timestamp": 797871439188,
+      "id": 54,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/_not-found/page"
+      },
+      "startTime": 1764970186208,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 231999,
+      "timestamp": 797871384155,
+      "id": 51,
+      "tags": {},
+      "startTime": 1764970186153,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 6,
+      "timestamp": 797871616194,
+      "id": 55,
+      "parentId": 51,
+      "tags": {
+        "memory.rss": "441307136",
+        "memory.heapUsed": "202457312",
+        "memory.heapTotal": "230371328"
+      },
+      "startTime": 1764970186385,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "client-hmr-latency",
+      "duration": 1558000,
+      "timestamp": 797876860935,
+      "id": 56,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764970193222,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "compile-path",
+      "duration": 15363,
+      "timestamp": 797885120815,
+      "id": 59,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764970199890,
+      "traceId": "ba0329ef93434812"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 70000,
+      "timestamp": 797885051264,
+      "id": 60,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764970199986,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 110664,
+      "timestamp": 797885120178,
+      "id": 57,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764970199889,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 11,
+      "timestamp": 797885230968,
+      "id": 61,
+      "parentId": 57,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "436432896",
+        "memory.heapUsed": "211168944",
+        "memory.heapTotal": "229134336"
+      },
+      "startTime": 1764970200000,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 1492,
+      "timestamp": 797885296716,
+      "id": 63,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764970200066,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 36909,
+      "timestamp": 797885296185,
+      "id": 62,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764970200065,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 22,
+      "timestamp": 797885333132,
+      "id": 64,
+      "parentId": 62,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "431747072",
+        "memory.heapUsed": "206731136",
+        "memory.heapTotal": "224247808"
+      },
+      "startTime": 1764970200102,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 3787,
+      "timestamp": 798019590795,
+      "id": 66,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764970334359,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "handle-request",
+      "duration": 144825,
+      "timestamp": 798019589711,
+      "id": 65,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764970334358,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 6,
+      "timestamp": 798019734566,
+      "id": 67,
+      "parentId": 65,
+      "tags": {
+        "url": "/",
+        "memory.rss": "427159552",
+        "memory.heapUsed": "222023424",
+        "memory.heapTotal": "231616512"
+      },
+      "startTime": 1764970334503,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 7566,
+      "timestamp": 798060459068,
+      "id": 69,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764970375228,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 1758,
+      "timestamp": 798060862096,
+      "id": 70,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764970375631,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 1603,
+      "timestamp": 798060864013,
+      "id": 71,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764970375633,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 1487,
+      "timestamp": 798060869944,
+      "id": 72,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764970375639,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 1358,
+      "timestamp": 798060871639,
+      "id": 73,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764970375640,
+      "traceId": "ba0329ef93434812"
+    },
+    {
+      "name": "compile-path",
+      "duration": 68367,
+      "timestamp": 798060880142,
+      "id": 76,
+      "tags": {
+        "trigger": "/_not-found/page"
+      },
+      "startTime": 1764970375649,
+      "traceId": "ba0329ef93434812"
+    }
+  ],
+  [
+    {
+      "name": "hot-reloader",
+      "duration": 301,
+      "timestamp": 824149109466,
+      "id": 3,
+      "tags": {
+        "version": "16.0.1"
+      },
+      "startTime": 1764996461246,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 488152,
+      "timestamp": 824149740740,
+      "id": 4,
+      "tags": {
+        "trigger": "proxy"
+      },
+      "startTime": 1764996461877,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "setup-dev-bundler",
+      "duration": 2220499,
+      "timestamp": 824148291691,
+      "id": 2,
+      "parentId": 1,
+      "tags": {},
+      "startTime": 1764996460428,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "start-dev-server",
+      "duration": 3951408,
+      "timestamp": 824147423879,
+      "id": 1,
+      "tags": {
+        "cpus": "24",
+        "platform": "win32",
+        "memory.freeMem": "1094705152",
+        "memory.totalMem": "16886128640",
+        "memory.heapSizeLimit": "8492417024",
+        "memory.rss": "296116224",
+        "memory.heapTotal": "73355264",
+        "memory.heapUsed": "41582168"
+      },
+      "startTime": 1764996459561,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 9925343,
+      "timestamp": 824152290749,
+      "id": 7,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764996464427,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "ensure-page",
+      "duration": 2359,
+      "timestamp": 824163593008,
+      "id": 8,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764996475729,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 686,
+      "timestamp": 824163595594,
+      "id": 9,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764996475732,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 933,
+      "timestamp": 824163613270,
+      "id": 10,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764996475750,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 921,
+      "timestamp": 824163614315,
+      "id": 11,
+      "parentId": 3,
+      "tags": {},
+      "startTime": 1764996475751,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 11447778,
+      "timestamp": 824152203711,
+      "id": 5,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764996464341,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 24,
+      "timestamp": 824163651640,
+      "id": 15,
+      "parentId": 5,
+      "tags": {
+        "url": "/",
+        "memory.rss": "678039552",
+        "memory.heapUsed": "100565736",
+        "memory.heapTotal": "128077824"
+      },
+      "startTime": 1764996475788,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 729700,
+      "timestamp": 824163622698,
+      "id": 14,
+      "tags": {
+        "trigger": "/_not-found/page"
+      },
+      "startTime": 1764996475759,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "ensure-page",
+      "duration": 9622,
+      "timestamp": 824164354194,
+      "id": 16,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/_not-found/page"
+      },
+      "startTime": 1764996476491,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 1073960,
+      "timestamp": 824163617487,
+      "id": 12,
+      "tags": {},
+      "startTime": 1764996475754,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 12,
+      "timestamp": 824164691706,
+      "id": 17,
+      "parentId": 12,
+      "tags": {
+        "memory.rss": "710348800",
+        "memory.heapUsed": "124394840",
+        "memory.heapTotal": "147042304"
+      },
+      "startTime": 1764996476828,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 52715,
+      "timestamp": 825147736082,
+      "id": 20,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764997459873,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 216000,
+      "timestamp": 825147515292,
+      "id": 21,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764997460134,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 285426,
+      "timestamp": 825147731668,
+      "id": 18,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764997459868,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 12,
+      "timestamp": 825148017214,
+      "id": 22,
+      "parentId": 18,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "221892608",
+        "memory.heapUsed": "120100728",
+        "memory.heapTotal": "130031616"
+      },
+      "startTime": 1764997460154,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 3841,
+      "timestamp": 825148083175,
+      "id": 24,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764997460220,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 83749,
+      "timestamp": 825148082493,
+      "id": 23,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764997460219,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 8,
+      "timestamp": 825148166296,
+      "id": 25,
+      "parentId": 23,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "228208640",
+        "memory.heapUsed": "121538896",
+        "memory.heapTotal": "140255232"
+      },
+      "startTime": 1764997460303,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 32944,
+      "timestamp": 825191617954,
+      "id": 28,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764997503755,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 126000,
+      "timestamp": 825191491373,
+      "id": 29,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764997503942,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 258083,
+      "timestamp": 825191616637,
+      "id": 26,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764997503753,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 12,
+      "timestamp": 825191874848,
+      "id": 30,
+      "parentId": 26,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "236965888",
+        "memory.heapUsed": "129250056",
+        "memory.heapTotal": "139857920"
+      },
+      "startTime": 1764997504011,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 3521,
+      "timestamp": 825191940275,
+      "id": 32,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764997504077,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 112538,
+      "timestamp": 825191939279,
+      "id": 31,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764997504076,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 9,
+      "timestamp": 825192051888,
+      "id": 33,
+      "parentId": 31,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "238456832",
+        "memory.heapUsed": "131094944",
+        "memory.heapTotal": "144052224"
+      },
+      "startTime": 1764997504188,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 3666,
+      "timestamp": 825227490138,
+      "id": 35,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764997539626,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 704020,
+      "timestamp": 825227488596,
+      "id": 34,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764997539625,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 124,
+      "timestamp": 825228193253,
+      "id": 36,
+      "parentId": 34,
+      "tags": {
+        "url": "/",
+        "memory.rss": "259026944",
+        "memory.heapUsed": "142979408",
+        "memory.heapTotal": "156430336"
+      },
+      "startTime": 1764997540329,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 27624,
+      "timestamp": 825388357099,
+      "id": 39,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764997700493,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 86000,
+      "timestamp": 825388262048,
+      "id": 40,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764997700748,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 276961,
+      "timestamp": 825388355486,
+      "id": 37,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764997700492,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 10,
+      "timestamp": 825388632512,
+      "id": 41,
+      "parentId": 37,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "282251264",
+        "memory.heapUsed": "156145216",
+        "memory.heapTotal": "161026048"
+      },
+      "startTime": 1764997700769,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 5444,
+      "timestamp": 825396937564,
+      "id": 43,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764997709074,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 830773,
+      "timestamp": 825396935998,
+      "id": 42,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764997709072,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 8,
+      "timestamp": 825397766853,
+      "id": 44,
+      "parentId": 42,
+      "tags": {
+        "url": "/",
+        "memory.rss": "320598016",
+        "memory.heapUsed": "173041184",
+        "memory.heapTotal": "206790656"
+      },
+      "startTime": 1764997709903,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 24366,
+      "timestamp": 825409193354,
+      "id": 47,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764997721330,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 106000,
+      "timestamp": 825409081313,
+      "id": 48,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764997721597,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 292204,
+      "timestamp": 825409192676,
+      "id": 45,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764997721329,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 9,
+      "timestamp": 825409484977,
+      "id": 49,
+      "parentId": 45,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "302923776",
+        "memory.heapUsed": "171736040",
+        "memory.heapTotal": "191275008"
+      },
+      "startTime": 1764997721621,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 22546,
+      "timestamp": 825474993286,
+      "id": 52,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764997787130,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 113000,
+      "timestamp": 825474871205,
+      "id": 53,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764997787258,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 144240,
+      "timestamp": 825474992367,
+      "id": 50,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764997787129,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 7,
+      "timestamp": 825475136656,
+      "id": 54,
+      "parentId": 50,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "308097024",
+        "memory.heapUsed": "188376672",
+        "memory.heapTotal": "192991232"
+      },
+      "startTime": 1764997787273,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 3513,
+      "timestamp": 825477817532,
+      "id": 56,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764997789954,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 662402,
+      "timestamp": 825477815590,
+      "id": 55,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764997789952,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 3,
+      "timestamp": 825478478035,
+      "id": 57,
+      "parentId": 55,
+      "tags": {
+        "url": "/",
+        "memory.rss": "328687616",
+        "memory.heapUsed": "195719704",
+        "memory.heapTotal": "209506304"
+      },
+      "startTime": 1764997790614,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 4305,
+      "timestamp": 825492274440,
+      "id": 59,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764997804411,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 504987,
+      "timestamp": 825492273686,
+      "id": 58,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764997804410,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 3,
+      "timestamp": 825492778726,
+      "id": 60,
+      "parentId": 58,
+      "tags": {
+        "url": "/",
+        "memory.rss": "324665344",
+        "memory.heapUsed": "196820640",
+        "memory.heapTotal": "205574144"
+      },
+      "startTime": 1764997804915,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 18130,
+      "timestamp": 825509018741,
+      "id": 63,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764997821155,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "client-hmr-latency",
+      "duration": 69000,
+      "timestamp": 825508941499,
+      "id": 64,
+      "parentId": 3,
+      "tags": {
+        "updatedModules": [],
+        "page": "/",
+        "isPageHidden": true
+      },
+      "startTime": 1764997821325,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 187746,
+      "timestamp": 825509018076,
+      "id": 61,
+      "tags": {
+        "url": "/?_rsc=fsnpp"
+      },
+      "startTime": 1764997821154,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 7,
+      "timestamp": 825509205895,
+      "id": 65,
+      "parentId": 61,
+      "tags": {
+        "url": "/?_rsc=fsnpp",
+        "memory.rss": "344051712",
+        "memory.heapUsed": "203360008",
+        "memory.heapTotal": "221368320"
+      },
+      "startTime": 1764997821342,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 6986,
+      "timestamp": 825510910217,
+      "id": 67,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764997823047,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 597385,
+      "timestamp": 825510908981,
+      "id": 66,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764997823045,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 10,
+      "timestamp": 825511506429,
+      "id": 68,
+      "parentId": 66,
+      "tags": {
+        "url": "/",
+        "memory.rss": "362647552",
+        "memory.heapUsed": "212548696",
+        "memory.heapTotal": "245833728"
+      },
+      "startTime": 1764997823643,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 6196,
+      "timestamp": 825540060978,
+      "id": 70,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764997852197,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 542886,
+      "timestamp": 825540060228,
+      "id": 69,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764997852196,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 8,
+      "timestamp": 825540603172,
+      "id": 71,
+      "parentId": 69,
+      "tags": {
+        "url": "/",
+        "memory.rss": "354078720",
+        "memory.heapUsed": "211377040",
+        "memory.heapTotal": "220930048"
+      },
+      "startTime": 1764997852739,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 11112,
+      "timestamp": 825649258642,
+      "id": 73,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764997961395,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "handle-request",
+      "duration": 669033,
+      "timestamp": 825649257917,
+      "id": 72,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764997961395,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 14,
+      "timestamp": 825649927028,
+      "id": 74,
+      "parentId": 72,
+      "tags": {
+        "url": "/",
+        "memory.rss": "363413504",
+        "memory.heapUsed": "211941752",
+        "memory.heapTotal": "228868096"
+      },
+      "startTime": 1764997962064,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 1283,
+      "timestamp": 825830436852,
+      "id": 75,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/index.htm"
+      },
+      "startTime": 1764998142573,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 721,
+      "timestamp": 825830438375,
+      "id": 76,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/index.htm"
+      },
+      "startTime": 1764998142575,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 826,
+      "timestamp": 825830443427,
+      "id": 79,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/index.htm"
+      },
+      "startTime": 1764998142580,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 773,
+      "timestamp": 825830444385,
+      "id": 80,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/index.htm"
+      },
+      "startTime": 1764998142581,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 12419,
+      "timestamp": 825830441829,
+      "id": 78,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764998142578,
+      "traceId": "8dca9e5660a816c3"
+    },
+    {
+      "name": "compile-path",
+      "duration": 134579,
+      "timestamp": 825830450130,
+      "id": 83,
+      "tags": {
+        "trigger": "/_not-found/page"
+      },
+      "startTime": 1764998142586,
+      "traceId": "8dca9e5660a816c3"
+    }
+  ],
+  [
+    {
+      "name": "hot-reloader",
+      "duration": 59,
+      "timestamp": 826669415959,
+      "id": 3,
+      "tags": {
+        "version": "16.0.1"
+      },
+      "startTime": 1764998981552,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "compile-path",
+      "duration": 222051,
+      "timestamp": 826669473056,
+      "id": 4,
+      "tags": {
+        "trigger": "proxy"
+      },
+      "startTime": 1764998981609,
+      "traceId": "0fdd757a64a6e94c"
+    }
+  ],
+  [
+    {
+      "name": "setup-dev-bundler",
+      "duration": 849806,
+      "timestamp": 826669113004,
+      "id": 2,
+      "parentId": 1,
+      "tags": {},
+      "startTime": 1764998981249,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "start-dev-server",
+      "duration": 2141067,
+      "timestamp": 826668556936,
+      "id": 1,
+      "tags": {
+        "cpus": "24",
+        "platform": "win32",
+        "memory.freeMem": "1877336064",
+        "memory.totalMem": "16886128640",
+        "memory.heapSizeLimit": "8492417024",
+        "memory.rss": "288645120",
+        "memory.heapTotal": "73355264",
+        "memory.heapUsed": "41782512"
+      },
+      "startTime": 1764998980694,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "compile-path",
+      "duration": 4760848,
+      "timestamp": 826670727701,
+      "id": 7,
+      "tags": {
+        "trigger": "/"
+      },
+      "startTime": 1764998982864,
+      "traceId": "0fdd757a64a6e94c"
+    }
+  ],
+  [
+    {
+      "name": "handle-request",
+      "duration": 6305565,
+      "timestamp": 826670715512,
+      "id": 5,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764998982852,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 12,
+      "timestamp": 826677021237,
+      "id": 8,
+      "parentId": 5,
+      "tags": {
+        "url": "/",
+        "memory.rss": "674910208",
+        "memory.heapUsed": "100301408",
+        "memory.heapTotal": "131428352"
+      },
+      "startTime": 1764998989158,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 3020,
+      "timestamp": 826684396751,
+      "id": 10,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/page"
+      },
+      "startTime": 1764998996533,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "handle-request",
+      "duration": 501108,
+      "timestamp": 826684395718,
+      "id": 9,
+      "tags": {
+        "url": "/"
+      },
+      "startTime": 1764998996532,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "memory-usage",
+      "duration": 11,
+      "timestamp": 826684896933,
+      "id": 11,
+      "parentId": 9,
+      "tags": {
+        "url": "/",
+        "memory.rss": "685998080",
+        "memory.heapUsed": "109284064",
+        "memory.heapTotal": "137854976"
+      },
+      "startTime": 1764998997033,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 1893,
+      "timestamp": 826684966033,
+      "id": 12,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/icons/skitbit-white.svg"
+      },
+      "startTime": 1764998997102,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 698,
+      "timestamp": 826684968116,
+      "id": 13,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/icons/skitbit-white.svg"
+      },
+      "startTime": 1764998997105,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 1064,
+      "timestamp": 826684970070,
+      "id": 14,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/icons/skitbit-white.svg"
+      },
+      "startTime": 1764998997106,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "ensure-page",
+      "duration": 639,
+      "timestamp": 826684971198,
+      "id": 15,
+      "parentId": 3,
+      "tags": {
+        "inputPage": "/icons/skitbit-white.svg"
+      },
+      "startTime": 1764998997108,
+      "traceId": "0fdd757a64a6e94c"
+    },
+    {
+      "name": "compile-path",
+      "duration": 695742,
+      "timestamp": 826684978712,
+      "id": 18,
+      "tags": {
+        "trigger": "/_not-found/page"
+      },
+      "startTime": 1764998997115,
+      "traceId": "0fdd757a64a6e94c"
+    }
+  ]
+]

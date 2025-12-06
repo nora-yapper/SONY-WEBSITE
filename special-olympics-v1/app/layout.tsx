@@ -1,7 +1,6 @@
 import type React from "react";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Script from "next/script";
 import { Suspense } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -9,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { VerticalSidebarNav } from "@/components/vertical-sidebar-nav";
 import { SectionAnnouncement } from "@/components/section-announcement";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+// Fonts loaded via Google Fonts <link> in the head
 
 export const metadata: Metadata = {
   title: "Special Olympics New York | Authentic Champions",
@@ -24,24 +23,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={inter.className}
-      style={{ scrollBehavior: "smooth" }}
-    >
+    <html lang="en" style={{ scrollBehavior: "smooth" }}>
       <head>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
         />
 
-        {/* Font Preload */}
+        {/* Preconnect and Google Fonts - Changa for headings and Ubuntu for body */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="preload"
-          href="/fonts/Inter.woff2"
-          as="font"
-          type="font/woff2"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+          rel="stylesheet"
         />
 
         {/* Dynamic Favicon Script */}
